@@ -1,0 +1,1063 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2c2a3e;
+  font-family: "Anonymous Pro";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-size: 13px;
+}
+
+body .zone1 {
+  background-color: #3f3d56;
+  color: white;
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+body .zone1 .sec {
+  height: 200px;
+}
+
+body .zone1 .sec .image {
+  padding: 35px;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+body .zone1 .sec .logo {
+  width: 220px;
+  margin: 10px;
+}
+
+body .zone1 .sec .underimage {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .zone1 .sec .underimage div {
+  padding-bottom: 15px;
+  color: white;
+}
+
+body .zone1 .sec .underimage .div2 {
+  padding-bottom: 15px;
+  color: #226cfc;
+  font-size: 12px;
+}
+
+body .zone1 .zone12 {
+  margin: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ff7f00;
+}
+
+body .zone1 .zone12 hr {
+  width: 150px;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+body .zone1 .zone12 div {
+  font-size: 21px;
+}
+
+body .zone1 .zone12 ul {
+  list-style: none;
+  color: white;
+  margin: 25px;
+  width: 80%;
+}
+
+body .zone1 .zone12 ul li {
+  margin-bottom: 20px;
+  color: #226cfc;
+}
+
+body .zone1 .zone12 ul li a {
+  text-decoration: none;
+  color: #226cfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+body .zone1 .zone12 ul li a svg {
+  fill: #226cfc;
+  width: 15px;
+  height: 15px;
+  stroke: black;
+}
+
+body .zone1 .zone12 ul li .active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body .zone1 .zone12 ul li .active svg {
+  fill: white;
+}
+
+body .zone1 button {
+  background-color: #ff7f00;
+  border: none;
+  color: white;
+  padding: 4px 30px;
+  border-radius: 7px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+body .zone1 button:hover {
+  background-color: white;
+  color: #ff7f00;
+}
+
+body .c23 {
+  display: -ms-grid;
+  display: grid;
+  margin-left: 200px;
+}
+
+body .c23 .zone2 {
+  margin-top: 70px;
+  width: 100%;
+}
+
+body .c23 .zone2 h1 {
+  margin-left: 60px;
+  color: white;
+}
+
+body .c23 .zone2 .zone21 {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .c23 .zone2 .zone21 .A {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 50px;
+}
+
+body .c23 .zone2 .zone21 .A canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+body .c23 .zone2 .zone21 .A div {
+  background-color: #f2bcbc;
+  text-align: center;
+  width: 170px;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+}
+
+body .c23 .zone2 .zone21 .A img {
+  width: 75%;
+}
+
+body .c23 .topsellers {
+  margin: 30px;
+}
+
+body .c23 .topsellers table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-top: white 1px solid;
+}
+
+body .c23 .topsellers table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: #ff7f00;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .c23 .topsellers table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: white;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .c23 .topsellers table td div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body .c23 .topsellers table td div img {
+  width: 10%;
+}
+
+body .myproduct {
+  position: relative;
+  margin: 30px;
+  min-height: 100vh;
+  margin-left: 230px;
+}
+
+body .myproduct table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-top: white 1px solid;
+}
+
+body .myproduct table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: #ff7f00;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .myproduct table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px 0;
+  color: white;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .myproduct table td div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+body .myproduct table td div svg {
+  cursor: pointer;
+}
+
+body .myproduct table td img {
+  margin: -10px;
+  width: 60px;
+}
+
+body .myproduct table td .imguser {
+  width: 22%;
+}
+
+body .myproduct button {
+  background-color: #226cfc;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 13px;
+  margin-top: 50px;
+  float: right;
+}
+
+body .myproduct button:hover {
+  background-color: white;
+  color: #226cfc;
+}
+
+body .deleteConfiramtion {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .deleteConfiramtion .divox {
+  width: 300px;
+  background-color: #2c2a3e;
+  border: 3px white solid;
+  border-radius: 20px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .deleteConfiramtion .divox span {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+body .deleteConfiramtion .divox svg {
+  width: 50%;
+  height: AUTO;
+  margin-top: 30px;
+}
+
+body .deleteConfiramtion .divox #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  width: 72%;
+}
+
+body .deleteConfiramtion .divox #buttons button {
+  height: 40px;
+  width: 100px;
+  color: red;
+  font-weight: bold;
+}
+
+body .form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 9;
+}
+
+body .form-popup .popContainer {
+  width: 90%;
+  padding: 10px;
+  background-color: #3f3d56;
+  border-radius: 12px;
+  height: 730px;
+  color: #ff7f00;
+  margin: 0 auto;
+  margin-top: 20px;
+  -webkit-filter: drop-shadow(white);
+          filter: drop-shadow(white);
+}
+
+body .form-popup .popContainer button {
+  background-color: #226cfc;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 13px;
+  outline: none;
+  float: right;
+}
+
+body .form-popup .popContainer button:hover {
+  background-color: white;
+  color: #226cfc;
+}
+
+body .form-popup .popContainer button:disabled {
+  background-color: gray;
+}
+
+body .form-popup div {
+  position: relative;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
+  padding: 10px 0;
+  height: 95%;
+}
+
+body .form-popup div section {
+  padding: 0 20px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .form-popup div section small {
+  display: none;
+  color: #e95050;
+}
+
+body .form-popup div section:last-child {
+  height: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+}
+
+body .form-popup div section:last-child input {
+  width: 80%;
+  height: 200px;
+  color: #dadada;
+  border: 2px dashed #3f3d56;
+}
+
+body .form-popup div input, body .form-popup div textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  background: white;
+  border-radius: 2px;
+  outline: none;
+}
+
+body .form-popup div .btn.cancel {
+  border-radius: 50%;
+  padding: 5px 10px;
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body .form-popup div .btn.cancel:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+body .form-popup.setting div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .form-popup.setting div section:last-child {
+  height: auto;
+}
+
+body .zonesettings {
+  margin-left: 230px;
+}
+
+body .zonesettings .s1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  width: 90%;
+  margin-bottom: -10px;
+}
+
+body .zonesettings .s1 .c1, body .zonesettings .s1 .s2 div .c2, body .zonesettings .s2 div .s1 .c2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  margin: 35px;
+}
+
+body .zonesettings .s1 .c1 .ic, body .zonesettings .s1 .s2 div .c2 .ic, body .zonesettings .s2 div .s1 .c2 .ic {
+  position: relative;
+}
+
+body .zonesettings .s1 .c1 .ic svg, body .zonesettings .s1 .s2 div .c2 .ic svg, body .zonesettings .s2 div .s1 .c2 .ic svg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+body .zonesettings .s1 .c1 div, body .zonesettings .s1 .s2 div .c2 div, body .zonesettings .s2 div .s1 .c2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .zonesettings .s1 .c1 div .in, body .zonesettings .s1 .s2 div .c2 div .in, body .zonesettings .s2 div .s1 .c2 div .in {
+  display: inline;
+  font-size: 10px;
+  margin-top: 6px;
+  color: #9296ad;
+}
+
+body .zonesettings .s1 .c1 div .in svg, body .zonesettings .s1 .s2 div .c2 div .in svg, body .zonesettings .s2 div .s1 .c2 div .in svg {
+  width: 9px;
+  height: 9px;
+}
+
+body .zonesettings .s1 .c2 div {
+  font-size: 16px;
+  margin-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body .zonesettings .s1 .c2 div svg {
+  width: 25px;
+  height: 25px;
+}
+
+body .zonesettings hr {
+  width: 90%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .zonesettings .s2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .zonesettings .s2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .zonesettings .s2 div .c1, body .zonesettings .s2 div .c2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 35px;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+  font-weight: bold;
+}
+
+body .zonesettings .s2 div .c2 {
+  font-weight: normal;
+}
+
+body .zonesettings .s2 svg {
+  margin: 35px;
+}
+
+body .zonesettings .s3 .zone31 {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .zonesettings .s3 .zone31 .X {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 50px;
+}
+
+body .zonesettings .s3 .zone31 .X div {
+  background-color: #f2bcbc;
+  text-align: center;
+  width: 170px;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+}
+
+body .zonesettings .s3 .zone31 .X img {
+  width: 75%;
+}
+
+body .logdesc {
+  background-image: url(img/Trac.svg);
+  color: white;
+  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(12, 12, 12, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+body .logdesc svg {
+  height: 50%;
+  margin: 3px;
+}
+
+body .log {
+  background-color: #2c2a3e;
+  color: white;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+body .log span {
+  color: #ff7f00;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .log .c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+body .log .c input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+body .log .c div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #7b7b8b;
+}
+
+body .log .c div img {
+  width: 18px;
+}
+
+body .log .c .buttonlo {
+  padding: 12px;
+  border: 1px solid #ff7f00;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7f00), color-stop(50%), to(#fb6580));
+  background: linear-gradient(#ff7f00, 50%, #fb6580);
+}
+
+body .log .c .or {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+body .log .c .or a {
+  color: #ff7f00;
+  text-decoration: none;
+}
+
+body .log .c .buttongo {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body .log .c .buttongo img {
+  width: 15px;
+}
+
+body .log .c .buttonfb {
+  padding: 12px;
+  border: 1px solid #39579a;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background-color: #39579a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+body .log .c .buttonfb img {
+  width: 8px;
+}
+
+#loginRegister {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#loginRegister .logdesc {
+  background-image: url(img/Trac.svg);
+  color: white;
+  width: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(12, 12, 12, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+#loginRegister .logdesc svg {
+  height: 50%;
+  margin: 3px;
+}
+
+#loginRegister .log {
+  background-color: #2c2a3e;
+  color: white;
+  width: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+#loginRegister .log span {
+  color: #ff7f00;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#loginRegister .log .c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+#loginRegister .log .c input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+#loginRegister .log .c div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #7b7b8b;
+}
+
+#loginRegister .log .c div img {
+  width: 18px;
+}
+
+#loginRegister .log .c .buttonlo {
+  padding: 12px;
+  border: 1px solid #ff7f00;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7f00), color-stop(50%), to(#fb6580));
+  background: linear-gradient(#ff7f00, 50%, #fb6580);
+}
+
+#loginRegister .log .c .or {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+#loginRegister .log .c .or a {
+  color: #ff7f00;
+  text-decoration: none;
+}
+
+#loginRegister .log .c .buttongo {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#loginRegister .log .c .buttongo img {
+  width: 15px;
+}
+
+#loginRegister .log .c .buttonfb {
+  padding: 12px;
+  border: 1px solid #39579a;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background-color: #39579a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+#loginRegister .log .c .buttonfb img {
+  width: 8px;
+}
+/*# sourceMappingURL=sass.css.map */

@@ -1,0 +1,670 @@
+$clr-bk-body: #2c2a3e;
+$clr-bk-body2: #3f3d56;
+$blue: #226cfc;
+$orange: #ff7f00;
+$pink: #f2bcbc;
+$font-body: "Anonymous Pro";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $clr-bk-body2;
+  font-family: $font-body;
+  display: flex;
+  width: 100%;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+
+  .product {
+    height: 80vh;
+    width: 100%;
+    overflow-x: scroll;
+    position: relative;
+    .z {
+      display: flex;
+      background-color: $clr-bk-body;
+      border: 3px black solid;
+      border-radius: 20px;
+      margin: 20px;
+      padding: 10px;
+      height: 90px;
+      align-items: center;
+      gap: 10px;
+      justify-content: space-between;
+      .nm {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 50%;
+        span {
+          font-size: 12px;
+          margin: 0;
+          font-weight: bold;
+          text-transform: uppercase;
+          &:last-child {
+            opacity: 0.8;
+            font-weight: normal;
+            text-transform: capitalize;
+          }
+        }
+      }
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+
+  .top {
+    background-color: $clr-bk-body;
+    border-bottom: 5px black solid;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .c1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .next {
+        text-align: right;
+        width: 100%;
+        margin: -25px;
+      }
+
+      img {
+        margin: 20px;
+        width: 75%;
+      }
+    }
+    .nmr {
+      background-color: $orange;
+      text-align: center;
+      width: 170px;
+      padding: 7px 10px;
+      font-size: 25px;
+      color: black;
+      font-weight: bold;
+      border: 4px black solid;
+      margin-bottom: 20px;
+    }
+  }
+  .myproduct {
+    height: 80vh;
+    width: 100%;
+    overflow-x: scroll;
+    position: relative;
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 150%;
+
+      overflow: scroll;
+
+      border-top: white 1px solid;
+
+      position: absolute;
+      margin-top: 30px;
+
+      th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 18px;
+        color: $orange;
+        border-style: none;
+        border-bottom: white 1px solid;
+      }
+      td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 18px 0;
+        color: white;
+        border-style: none;
+        border-bottom: white 1px solid;
+        div {
+          display: flex;
+          gap: 10px;
+        }
+        img {
+          margin: -10px;
+          width: 60px;
+        }
+        .imguser {
+          width: 35%;
+        }
+      }
+    }
+  }
+  .deleteConfiramtion {
+    display: none;
+    position: absolute;
+
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    padding: 15px;
+
+    .divox {
+      width: 100%;
+      background-color: $clr-bk-body;
+      border: 3px white solid;
+      border-radius: 20px;
+      span {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        color: red;
+        font-weight: bold;
+      }
+
+      svg {
+        width: 50%;
+        height: AUTO;
+        margin-top: 30px;
+      }
+
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      #buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px;
+        width: 72%;
+
+        button {
+          height: 40px;
+          width: 100px;
+          color: red;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .form-popup {
+    display: none;
+    position: absolute;
+    top: 16%;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 9;
+
+    form {
+      width: 90%;
+      padding: 10px;
+      background-color: $clr-bk-body2;
+      border-radius: 12px;
+      height: 530px;
+      color: $orange;
+      margin: 0 auto;
+      margin-top: 20px;
+      filter: drop-shadow(rgba(255, 255, 255, 1));
+      border: 3px white solid;
+      .btn.cancel {
+        border-radius: 50%;
+        padding: 5px 10px;
+        background-color: red;
+        font-size: 20px;
+        color: white;
+        font-family: sans-serif;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        transition: all 0.2s ease;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        object-fit: contain;
+        align-items: center;
+        img {
+          width: 70%;
+        }
+        span {
+          text-align: center;
+          color: white;
+          margin-bottom: 0;
+        }
+        .secc {
+          display: flex;
+          flex-direction: row;
+          ul {
+            font-size: 20px;
+
+            li {
+              margin: 15px;
+              list-style: none;
+              font-weight: bold;
+            }
+          }
+          .ul2 {
+            font-size: 20px;
+            color: rgb(243, 234, 234);
+
+            li {
+              margin: 15px;
+              list-style: none;
+              font-weight: normal;
+            }
+          }
+        }
+        .icns {
+          display: flex;
+          flex-direction: row;
+          margin: 30px;
+        }
+      }
+    }
+  }
+  .popAdd {
+    display: none;
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 9;
+
+    form {
+      border: 3px white solid;
+      width: 90%;
+      padding: 10px;
+      background-color: $clr-bk-body2;
+      border-radius: 12px;
+      height: 730px;
+      color: $orange;
+      margin: 0 auto;
+      margin-top: 10px;
+
+      button {
+        background-color: $blue;
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        font-size: 13px;
+        outline: none;
+        margin: 20px;
+        float: right;
+
+        &:hover {
+          background-color: white;
+          color: $blue;
+        }
+      }
+    }
+    div {
+      position: relative;
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 20px;
+      h1 {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        small {
+          display: none;
+          color: rgb(233, 80, 80);
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        background: white;
+        border-radius: 2px;
+        outline: none;
+      }
+      .btn.cancel {
+        border-radius: 50%;
+        padding: 5px 10px;
+        background-color: red;
+        font-size: 20px;
+        color: white;
+        font-family: sans-serif;
+        position: absolute;
+        right: -33px;
+        top: -52px;
+      }
+    }
+  }
+}
+
+span {
+  align-items: center;
+  display: flex;
+
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+}
+.topsellers {
+  position: absolute;
+  bottom: 10%;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    border-top: white 1px solid;
+
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 18px;
+      color: $orange;
+      border-style: none;
+      border-bottom: white 1px solid;
+    }
+    td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 18px;
+      color: white;
+      border-style: none;
+      border-bottom: white 1px solid;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+.fixeadd {
+  position: fixed;
+  right: 15px;
+
+  bottom: 60px;
+  img {
+    width: 50px;
+    stroke: 3px black solid;
+    fill: chartreuse;
+  }
+}
+.bar {
+  a {
+    svg {
+      width: 130%;
+      height: 40px;
+      fill: $blue;
+    }
+  }
+  .active {
+    svg {
+      fill: white;
+    }
+  }
+  background-color: $clr-bk-body;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  padding: 0 10%;
+  border-top: 4px black solid;
+}
+.sett {
+  width: 100%;
+  height: 80%;
+
+  padding: 10px;
+  margin-bottom: 20px;
+
+  .z1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 19px;
+    color: #ffffff;
+    margin: 15px;
+
+    img {
+      width: 23%;
+    }
+    .loc {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin: 0%;
+      }
+      .in {
+        display: inline;
+        font-size: 16px;
+        margin-top: 10px;
+        color: #9296ad;
+        svg {
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+  }
+  .svgmod {
+    float: right;
+    margin-top: -45px;
+  }
+  hr {
+    border: 1px white solid;
+    margin: 0px 10px 0px 10px;
+  }
+  .z2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+    .z21 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      div {
+        font-size: 10px;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+
+        width: 90%;
+
+        svg {
+          width: 25px;
+          height: 25px;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+  .cor {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+
+    ul {
+      font-size: 20px;
+
+      li {
+        margin: 15px;
+        list-style: none;
+        font-weight: bold;
+      }
+    }
+    .ul2 {
+      font-size: 20px;
+      color: rgb(243, 234, 234);
+
+      li {
+        margin: 15px;
+        list-style: none;
+        font-weight: normal;
+      }
+    }
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    button {
+      background-color: $orange;
+      border: none;
+      color: white;
+      padding: 4px 30px;
+      border-radius: 7px;
+      font-size: 13px;
+
+      margin-top: 50px;
+      &:hover {
+        background-color: white;
+        color: $orange;
+      }
+    }
+  }
+}
+
+.bdlg {
+  @extend body;
+  background-color: $clr-bk-body;
+  .log {
+    background-color: $clr-bk-body;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .imglog {
+      height: 20%;
+    }
+    span {
+      color: $orange;
+      font-weight: bold;
+      font-size: 60px;
+      margin-bottom: 50px;
+      display: flex;
+    }
+    .c {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      input {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        margin-bottom: 20px;
+      }
+      div {
+        display: flex;
+
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        font-size: 12px;
+        color: #7b7b8b;
+        img {
+          width: 18px;
+        }
+      }
+      .buttonlo {
+        padding: 12px;
+        border: 1px solid $orange;
+        border-radius: 4px;
+        resize: vertical;
+        margin-bottom: 20px;
+        color: white;
+        width: 100%;
+        background: linear-gradient(#ff7f00, 50%, #fb6580);
+      }
+      .or {
+        justify-content: center;
+        margin-bottom: 20px;
+        a {
+          color: $orange;
+          text-decoration: none;
+        }
+      }
+      .buttongo {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+        margin-bottom: 20px;
+        color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 15px;
+        }
+      }
+      .buttonfb {
+        padding: 12px;
+        border: 1px solid #39579a;
+        border-radius: 4px;
+        resize: vertical;
+        margin-bottom: 20px;
+        color: white;
+        width: 100%;
+        background-color: #39579a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Charts
+
+#chartsContainer {
+  width: 100%;
+  display: flex;
+  // position: relative;
+
+  canvas {
+    // position: absolute;
+
+    width: 100% !important;
+    min-width: 100%;
+    height: auto !important;
+  }
+}

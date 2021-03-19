@@ -1,0 +1,894 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .bdlg {
+  background-color: #3f3d56;
+  font-family: "Anonymous Pro";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+body .product, .bdlg .product {
+  height: 80vh;
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+}
+
+body .product .z, .bdlg .product .z {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #2c2a3e;
+  border: 3px black solid;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
+  height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .product .z .nm, .bdlg .product .z .nm {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 50%;
+}
+
+body .product .z .nm span, .bdlg .product .z .nm span {
+  font-size: 12px;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body .product .z .nm span:last-child, .bdlg .product .z .nm span:last-child {
+  opacity: 0.8;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+body .product .z img, .bdlg .product .z img {
+  max-width: 80px;
+}
+
+body .top, .bdlg .top {
+  background-color: #2c2a3e;
+  border-bottom: 5px black solid;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .top .c1, .bdlg .top .c1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .top .c1 .next, .bdlg .top .c1 .next {
+  text-align: right;
+  width: 100%;
+  margin: -25px;
+}
+
+body .top .c1 img, .bdlg .top .c1 img {
+  margin: 20px;
+  width: 75%;
+}
+
+body .top .nmr, .bdlg .top .nmr {
+  background-color: #ff7f00;
+  text-align: center;
+  width: 170px;
+  padding: 7px 10px;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  border: 4px black solid;
+  margin-bottom: 20px;
+}
+
+body .myproduct, .bdlg .myproduct {
+  height: 80vh;
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+}
+
+body .myproduct table, .bdlg .myproduct table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 150%;
+  overflow: scroll;
+  border-top: white 1px solid;
+  position: absolute;
+  margin-top: 30px;
+}
+
+body .myproduct table th, .bdlg .myproduct table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: #ff7f00;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .myproduct table td, .bdlg .myproduct table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px 0;
+  color: white;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+body .myproduct table td div, .bdlg .myproduct table td div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+body .myproduct table td img, .bdlg .myproduct table td img {
+  margin: -10px;
+  width: 60px;
+}
+
+body .myproduct table td .imguser, .bdlg .myproduct table td .imguser {
+  width: 35%;
+}
+
+body .deleteConfiramtion, .bdlg .deleteConfiramtion {
+  display: none;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 20%;
+  padding: 15px;
+}
+
+body .deleteConfiramtion .divox, .bdlg .deleteConfiramtion .divox {
+  width: 100%;
+  background-color: #2c2a3e;
+  border: 3px white solid;
+  border-radius: 20px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .deleteConfiramtion .divox span, .bdlg .deleteConfiramtion .divox span {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+body .deleteConfiramtion .divox svg, .bdlg .deleteConfiramtion .divox svg {
+  width: 50%;
+  height: AUTO;
+  margin-top: 30px;
+}
+
+body .deleteConfiramtion .divox #buttons, .bdlg .deleteConfiramtion .divox #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  width: 72%;
+}
+
+body .deleteConfiramtion .divox #buttons button, .bdlg .deleteConfiramtion .divox #buttons button {
+  height: 40px;
+  width: 100px;
+  color: red;
+  font-weight: bold;
+}
+
+body .form-popup, .bdlg .form-popup {
+  display: none;
+  position: absolute;
+  top: 16%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 9;
+}
+
+body .form-popup form, .bdlg .form-popup form {
+  width: 90%;
+  padding: 10px;
+  background-color: #3f3d56;
+  border-radius: 12px;
+  height: 530px;
+  color: #ff7f00;
+  margin: 0 auto;
+  margin-top: 20px;
+  -webkit-filter: drop-shadow(white);
+          filter: drop-shadow(white);
+  border: 3px white solid;
+}
+
+body .form-popup form .btn.cancel, .bdlg .form-popup form .btn.cancel {
+  border-radius: 50%;
+  padding: 5px 10px;
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body .form-popup form div, .bdlg .form-popup form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form-popup form div img, .bdlg .form-popup form div img {
+  width: 70%;
+}
+
+body .form-popup form div span, .bdlg .form-popup form div span {
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+
+body .form-popup form div .secc, .bdlg .form-popup form div .secc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .form-popup form div .secc ul, .bdlg .form-popup form div .secc ul {
+  font-size: 20px;
+}
+
+body .form-popup form div .secc ul li, .bdlg .form-popup form div .secc ul li {
+  margin: 15px;
+  list-style: none;
+  font-weight: bold;
+}
+
+body .form-popup form div .secc .ul2, .bdlg .form-popup form div .secc .ul2 {
+  font-size: 20px;
+  color: #f3eaea;
+}
+
+body .form-popup form div .secc .ul2 li, .bdlg .form-popup form div .secc .ul2 li {
+  margin: 15px;
+  list-style: none;
+  font-weight: normal;
+}
+
+body .form-popup form div .icns, .bdlg .form-popup form div .icns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 30px;
+}
+
+body .popAdd, .bdlg .popAdd {
+  display: none;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 9;
+}
+
+body .popAdd form, .bdlg .popAdd form {
+  border: 3px white solid;
+  width: 90%;
+  padding: 10px;
+  background-color: #3f3d56;
+  border-radius: 12px;
+  height: 730px;
+  color: #ff7f00;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+body .popAdd form button, .bdlg .popAdd form button {
+  background-color: #226cfc;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 13px;
+  outline: none;
+  margin: 20px;
+  float: right;
+}
+
+body .popAdd form button:hover, .bdlg .popAdd form button:hover {
+  background-color: white;
+  color: #226cfc;
+}
+
+body .popAdd div, .bdlg .popAdd div {
+  position: relative;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 20px;
+}
+
+body .popAdd div h1, .bdlg .popAdd div h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+body .popAdd div section, .bdlg .popAdd div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .popAdd div section small, .bdlg .popAdd div section small {
+  display: none;
+  color: #e95050;
+}
+
+body .popAdd div input, .bdlg .popAdd div input,
+body .popAdd div textarea,
+.bdlg .popAdd div textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  background: white;
+  border-radius: 2px;
+  outline: none;
+}
+
+body .popAdd div .btn.cancel, .bdlg .popAdd div .btn.cancel {
+  border-radius: 50%;
+  padding: 5px 10px;
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  position: absolute;
+  right: -33px;
+  top: -52px;
+}
+
+span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.topsellers {
+  position: absolute;
+  bottom: 10%;
+}
+
+.topsellers table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-top: white 1px solid;
+}
+
+.topsellers table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: #ff7f00;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+.topsellers table td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 18px;
+  color: white;
+  border-style: none;
+  border-bottom: white 1px solid;
+}
+
+.topsellers table td div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.topsellers table td div img {
+  width: 20%;
+}
+
+.fixeadd {
+  position: fixed;
+  right: 15px;
+  bottom: 60px;
+}
+
+.fixeadd img {
+  width: 50px;
+  stroke: 3px black solid;
+  fill: chartreuse;
+}
+
+.bar {
+  background-color: #2c2a3e;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  padding: 0 10%;
+  border-top: 4px black solid;
+}
+
+.bar a svg {
+  width: 130%;
+  height: 40px;
+  fill: #226cfc;
+}
+
+.bar .active svg {
+  fill: white;
+}
+
+.sett {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.sett .z1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 19px;
+  color: #ffffff;
+  margin: 15px;
+}
+
+.sett .z1 img {
+  width: 23%;
+}
+
+.sett .z1 .loc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sett .z1 .loc span {
+  margin: 0%;
+}
+
+.sett .z1 .loc .in {
+  display: inline;
+  font-size: 16px;
+  margin-top: 10px;
+  color: #9296ad;
+}
+
+.sett .z1 .loc .in svg {
+  width: 9px;
+  height: 9px;
+}
+
+.sett .svgmod {
+  float: right;
+  margin-top: -45px;
+}
+
+.sett hr {
+  border: 1px white solid;
+  margin: 0px 10px 0px 10px;
+}
+
+.sett .z2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.sett .z2 .z21 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sett .z2 .z21 div {
+  font-size: 10px;
+  margin-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.sett .z2 .z21 div svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+}
+
+.sett .cor {
+  margin: 20px 0px 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sett .cor ul {
+  font-size: 20px;
+}
+
+.sett .cor ul li {
+  margin: 15px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.sett .cor .ul2 {
+  font-size: 20px;
+  color: #f3eaea;
+}
+
+.sett .cor .ul2 li {
+  margin: 15px;
+  list-style: none;
+  font-weight: normal;
+}
+
+.sett div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sett div button {
+  background-color: #ff7f00;
+  border: none;
+  color: white;
+  padding: 4px 30px;
+  border-radius: 7px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+.sett div button:hover {
+  background-color: white;
+  color: #ff7f00;
+}
+
+.bdlg {
+  background-color: #2c2a3e;
+}
+
+.bdlg .log {
+  background-color: #2c2a3e;
+  color: white;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.bdlg .log .imglog {
+  height: 20%;
+}
+
+.bdlg .log span {
+  color: #ff7f00;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bdlg .log .c {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.bdlg .log .c input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.bdlg .log .c div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #7b7b8b;
+}
+
+.bdlg .log .c div img {
+  width: 18px;
+}
+
+.bdlg .log .c .buttonlo {
+  padding: 12px;
+  border: 1px solid #ff7f00;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7f00), color-stop(50%), to(#fb6580));
+  background: linear-gradient(#ff7f00, 50%, #fb6580);
+}
+
+.bdlg .log .c .or {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bdlg .log .c .or a {
+  color: #ff7f00;
+  text-decoration: none;
+}
+
+.bdlg .log .c .buttongo {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: black;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.bdlg .log .c .buttongo img {
+  width: 15px;
+}
+
+.bdlg .log .c .buttonfb {
+  padding: 12px;
+  border: 1px solid #39579a;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  background-color: #39579a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.bdlg .log .c .buttonfb img {
+  width: 8px;
+}
+
+#chartsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#chartsContainer canvas {
+  width: 100% !important;
+  min-width: 100%;
+  height: auto !important;
+}
+/*# sourceMappingURL=mobsass.css.map */
