@@ -4,6 +4,7 @@ const Name = document.querySelector("input[name='name']")
 const email = document.querySelector("input[name='email']")
 const phone = document.querySelector("input[name='phone']")
 const address = document.querySelector("input[name='address']")
+
 const inputFile = document.querySelector("#fileElem")
 errorName = document.querySelector("small#name")
 errorEmeil = document.querySelector("small#email")
@@ -26,6 +27,7 @@ function editProfile() {
             email.value = user.email
             phone.value = user.phone
             address.value = user.address
+           
         })
 }
 

@@ -96,14 +96,20 @@
                 </tr> -->
             </tbody>
         </table>
-
+        <button id="qrButton">start Selling</button>
     </div>
-
-
-
-
+    <span id="QrContainer"">
+        <span class="btn cancel" onclick="closeS()">X</span>
+        <video id="qr"></video>
+        <input id="quantity" type="Quantity">
+        <div id="t"></div>
+        <button class="btn" id="start">submit</button>
+    </span>
 </body>
+
 <script src="js/seller/mysales.js"></script>
-<script  src="redirecter.js"></script>
+<script src="redirecter.js"></script>
+<script type="module" src="js/Qr.js"></script>
 <script src="js/main.js"></script>
+
 </html>

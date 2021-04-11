@@ -23,7 +23,7 @@
             <div class="z1">
                 <img src="img/S1.png" alt="">
                 <div class="loc">
-                    <span>Robert Johnstons</span>
+                    <span id="ProfilUsername">Robert Johnstons</span>
                     <div class="in">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.94 13.94">
                             <g id="Places" transform="translate(0 0)">
@@ -162,12 +162,12 @@
                 </ul>
                 <ul class="ul2">
 
-                    <li>Andreea Fox</li>
-                    <li>niy@gmail.com</li>
-                    <li>+212 648640632</li>
-                    <li>youcode safi maroc</li>
-                    <li>SRTA-1</li>
-                    <li>#6</li>
+                    <li id="NAME">Andreea Fox</li>
+                    <li id="email">niy@gmail.com</li>
+                    <li id="phone">+212 648640632</li>
+                    <li id="address">youcode safi maroc</li>
+                    <li id="user_id">SRTA- <span></span></li>
+                    <li id="">#6</li>
                 </ul>
 
 
@@ -189,14 +189,14 @@
                     <input type="text" placeholder="Enter name" name="name">
                     <small id="name">please check the name</small>
 
-                    <input type="text" placeholder="Enter Email " name="Email">
-                    <small id="name">please check the Email</small>
+                    <input type="text" placeholder="Enter Email " name="email">
+                    <small id="email">please check the Email</small>
 
                     <input type="text" placeholder="Enter Phone " name="phone">
-                    <small id="name">please check the Phone</small>
+                    <small id="phone">please check the Phone</small>
 
-                    <input type="text" placeholder="Enter Address " name="Address">
-                    <small id="name">please check the Address</small>
+                    <input type="text" placeholder="Enter Address " name="address">
+                    <small id="address">please check the Address</small>
 
 
 
@@ -279,5 +279,7 @@
         document.querySelector("#notBlured").style.filter = "blur(0)";
     }
 </script>
-<script src="redirecter.js"></script>
+<script src="js/seller/sellerProfile.js"></script>
+<script  src="redirecter.js"></script>
+<script src="js/main.js"></script>
 </html>

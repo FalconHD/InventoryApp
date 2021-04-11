@@ -19,6 +19,77 @@ body {
   font-size: 13px;
 }
 
+body #QrContainer {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 200px;
+  overflow: hidden;
+  background-color: rgba(12, 12, 12, 0.9);
+  color: white;
+  display: none;
+}
+
+body #QrContainer video {
+  max-width: 70%;
+}
+
+body #QrContainer .t {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #QrContainer button {
+  background-color: #226cfc;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-size: 13px;
+  margin-top: 50px;
+  float: right;
+}
+
+body #QrContainer button:hover {
+  background-color: white;
+  color: #226cfc;
+}
+
+body #QrContainer .btn.cancel {
+  border-radius: 50%;
+  padding: 5px 10px;
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+body #QrContainer .btn.cancel:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
 body .zone1 {
   background-color: #3f3d56;
   color: white;

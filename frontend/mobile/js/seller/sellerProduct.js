@@ -3,52 +3,67 @@
 var container = document.querySelector('#Products')
 console.log(container);
 
-var id = 1
+var id = window.localStorage.getItem('id') ? window.localStorage.getItem('id') : 0
 
 items = []
 
 console.log("hell");
+function updateData(id) {
+    container.innerHTML = ""
+    fetch(`http://localhost/backend/api/item/readUserItems.php?user_id=${id}`).then(response =>
+        response.json()
+    ).then(data => {
+        console.log(data)
+        data.data ? data.data.forEach(elm => {
+            var tr = document.createElement('div')
+            var date = elm.expiration_Date.split(' ')[0]
+            tr.innerHTML = `
+            <div class="z">
+            <img src="img/P1.png" alt="img">
+            <div class="nm">
+                <span>${elm.NAME}</span>
+                <span>${elm.description}</span>
+            </div>
+            <a onclick="openForm(${elm.item_id})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4">
+                    <path id="More-icon"
+                        d="M16.334,2a2.185,2.185,0,0,1,2.333-2A2.186,2.186,0,0,1,21,2a2.186,2.186,0,0,1-2.334,2A2.186,2.186,0,0,1,16.334,2ZM8.167,2A2.186,2.186,0,0,1,10.5,0a2.185,2.185,0,0,1,2.333,2A2.186,2.186,0,0,1,10.5,4,2.186,2.186,0,0,1,8.167,2ZM0,2A2.186,2.186,0,0,1,2.334,0,2.185,2.185,0,0,1,4.666,2,2.186,2.186,0,0,1,2.334,4,2.186,2.186,0,0,1,0,2Z"
+                        fill="#ff7f00" />
+                </svg>
+            </a>
+            </div>
+                `
+            container.appendChild(tr)
+        }) : null;
+        items = data.data;
+    })
+}
 fetch(`http://localhost/backend/api/item/readUserItems.php?user_id=${id}`).then(response =>
     response.json()
 ).then(data => {
+    console.log(container);
     console.log(data)
-    data.data.forEach(elm => {
-        var tr = document.createElement('tr')
+    data.data ? data.data.forEach(elm => {
+        var tr = document.createElement('div')
         var date = elm.expiration_Date.split(' ')[0]
         tr.innerHTML = `
-                <td><img src="https://s2.dmcdn.net/v/SJXad1U-e0K3cbLLX/x1080" alt="img"></td>
-                <td>${elm.NAME}</td>
-                <td>${elm.price} DH</td>
-                <td>${date}</td>
-                <td>${elm.brand}</td>
-                <td>${elm.category}</td>
-                <td>${elm.stock}</td>
-                <td>
-                <div>
-                    <svg onclick="editItem(${elm.item_id})" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.41 32.187">
-                        <path id="Icon_awesome-edit" data-name="Icon awesome-edit"
-                            d="M24.75,4.877,30.3,10.162a.554.554,0,0,1,0,.809l-13.426,12.8-5.7.6a1.169,1.169,0,0,1-1.322-1.26l.633-5.438L23.9,4.877A.622.622,0,0,1,24.75,4.877Zm9.959-1.342-3-2.86a2.489,2.489,0,0,0-3.393,0L26.139,2.749a.554.554,0,0,0,0,.809l5.545,5.286a.622.622,0,0,0,.848,0l2.176-2.074a2.217,2.217,0,0,0,0-3.235Zm-11.1,16.753v5.965H3.934V7.5H18.061a.775.775,0,0,0,.523-.205l2.459-2.344a.7.7,0,0,0-.523-1.2H2.951A2.885,2.885,0,0,0,0,6.564V27.191A2.885,2.885,0,0,0,2.951,30H24.59a2.885,2.885,0,0,0,2.951-2.813V17.944a.744.744,0,0,0-1.26-.5L23.822,19.79A.7.7,0,0,0,23.607,20.288Z"
-                            transform="translate(1 1.183)" fill="#1989fa" stroke="#000" stroke-width="2" />
-                    </svg>
-                    <svg onclick="deleteItem(${elm.item_id})" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.854 23.5">
-                        <g id="Icon_feather-delete" data-name="Icon feather-delete" transform="translate(-0.5 -5)"
-                            opacity="0.5">
-                            <path id="Tracé_44" data-name="Tracé 44"
-                                d="M30.458,6H11.635L1.5,16.75,11.635,27.5H30.458a2.8,2.8,0,0,0,2.9-2.687V8.688A2.8,2.8,0,0,0,30.458,6Z"
-                                fill="#f60b0b" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" />
-                            <path id="Tracé_45" data-name="Tracé 45" d="M27,13.5l-9,9"
-                                transform="translate(-0.788 -1.25)" fill="none" stroke="#000" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" />
-                            <path id="Tracé_46" data-name="Tracé 46" d="M18,13.5l9,9"
-                                transform="translate(-0.788 -1.25)" fill="none" stroke="#000" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" />
-                        </g>
-                    </svg>
-                </div>
-            </td>`
+        <div class="z">
+        <img src="img/P1.png" alt="img">
+        <div class="nm">
+            <span>${elm.NAME}</span>
+            <span>${elm.description}</span>
+        </div>
+        <a onclick="openForm(${elm.item_id})">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="4" viewBox="0 0 21 4">
+                <path id="More-icon"
+                    d="M16.334,2a2.185,2.185,0,0,1,2.333-2A2.186,2.186,0,0,1,21,2a2.186,2.186,0,0,1-2.334,2A2.186,2.186,0,0,1,16.334,2ZM8.167,2A2.186,2.186,0,0,1,10.5,0a2.185,2.185,0,0,1,2.333,2A2.186,2.186,0,0,1,10.5,4,2.186,2.186,0,0,1,8.167,2ZM0,2A2.186,2.186,0,0,1,2.334,0,2.185,2.185,0,0,1,4.666,2,2.186,2.186,0,0,1,2.334,4,2.186,2.186,0,0,1,0,2Z"
+                    fill="#ff7f00" />
+            </svg>
+        </a>
+        </div>
+            `
         container.appendChild(tr)
-    });
+    }) : null;
     items = data.data;
 })
 
@@ -64,17 +79,19 @@ const formProfuctButton = document.querySelector("#formProfuctButton")
 
 
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.querySelector("#notBlured").style.filter = "blur(10px)";
-    const name = document.querySelector("input[name='name']").value = ""
-    const description = document.querySelector("textarea[name='description']").value = ""
-    const price = document.querySelector("input[name='price']").value = ""
-    const date = document.querySelector("input[name='expiration_Date']").value = ""
-    const category = document.querySelector("input[name='category']").value = ""
-    const brand = document.querySelector("input[name='brand']").value = ""
-    const formProfuctButton = document.querySelector("#formProfuctButton").innerHTML = "Add Product"
-}
+// function openForm(item) {
+//     console.log(item);
+//     document.getElementById("myForm").style.display = "block";
+//     document.querySelector("#notBlured").style.filter = "blur(10px)";
+//     document.querySelector("input[name='name']").value = ""
+//     document.querySelector("textarea[name='description']").value = ""
+//     document.querySelector("input[name='price']").value = ""
+//     document.querySelector("input[name='expiration_Date']").value = ""
+//     document.querySelector("input[name='category']").value = ""
+//     document.querySelector("input[name='brand']").value = ""
+//     document.querySelector("#formProfuctButton").innerHTML = "Add Product"
+//     document.querySelector("#formProfuctButton").setAttribute('onclick', `CreateItem(${id})`)
+// }
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
@@ -82,7 +99,10 @@ function closeForm() {
 }
 
 
-function editItem(id) {
+
+
+function editItem(itemid) {
+    console.log();
     document.getElementById("myForm").style.display = "block";
     document.querySelector("#notBlured").style.filter = "blur(10px)";
     errorName = document.querySelector("small#name").style.display = "none"
@@ -96,7 +116,7 @@ function editItem(id) {
 
     items.map((item) => {
         console.log();
-        if (item.item_id == id) {
+        if (item.item_id == itemid) {
             console.log(item.NAME);
             Name.value = item.NAME
             description.value = item.description
@@ -105,44 +125,100 @@ function editItem(id) {
             category.value = item.category
             brand.value = item.brand
             formProfuctButton.innerHTML = "Edit Now"
+            formProfuctButton.setAttribute('onclick', `updateItem(${itemid})`)
         }
     })
 }
 document.querySelector('.deleteConfiramtion').style.display = "none"
-const fo = document.querySelector('#unesZaml')
-document.querySelector("#unesZaml").addEventListener('submit',function(e){
-    e.preventDefault();
-    document.getElementById("myForm").style.display = "none";
-    document.querySelector("#notBlured").style.filter = "blur(0)";
+
+
+function updateItem(item) {
+    console.log(id, item);
+    const updatedItem = {
+        item_id: item,
+        NAME: Name.value,
+        user_id: +id,
+        description: description.value,
+        price: +price.value,
+        expiration_Date: date.value,
+        category: category.value,
+        brand: brand.value,
+        stock: 600
+    };
+    console.log(updatedItem);
+    fetch('http://localhost/backend/api/item/updateItem.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedItem)
+    }).then(() => {
+        console.log(id);
+        updateData(id)
+        closeForm()
+    })
+
+}
+function CreateItem(id) {
+    console.log(id);
+    const newItem = {
+        NAME: Name.value,
+        user_id: id,
+        description: description.value,
+        price: +price.value,
+        expiration_Date: date.value,
+        category: category.value,
+        brand: brand.value,
+        stock: 600
+    };
+    console.log(newItem);
+    fetch('http://localhost/backend/api/item/create.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newItem)
+    }).then(() => {
+        console.log(id);
+        updateData(id)
+        closeForm()
+    })
+
+}
+
+
+var itemTodelet = 0
+
+
+function deleteItem(item) {
     document.querySelector('.deleteConfiramtion').style.display = "flex"
-    
-})
-
-
+    itemTodelet = item
+    console.log(item);
+}
 
 function verifyEdit(choise) {
-    
     if (choise) {
         document.querySelector('.deleteConfiramtion').style.display = "none"
+        fetch(`http://localhost/backend/api/item/deleteItem.php?id=${itemTodelet}`).then(() => {
+            updateData(id)
+        })
 
     } else {
         document.querySelector('.deleteConfiramtion').style.display = "none";
     }
 }
-
-function deleteItem(id) {
-    console.log(id);
-}
-
-
 function inputesCheker(input, err) {
-
+    formProfuctButton.disabled = true
     console.log(errorName);
-
+    console.log(formProfuctButton);
     input.addEventListener("blur", () => {
-        if (!(/[\w\d]/g.test(input.value))) { err.style.display = "block" }
+        if (!(/[\w\d]/g.test(input.value))) {
+            formProfuctButton.disabled = true
+            err.style.display = "block"
+        }
     });
     input.addEventListener("focus", () => {
+        formProfuctButton.disabled = false
         err.style.display = "none"
     });
 }

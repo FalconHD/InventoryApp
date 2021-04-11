@@ -1,7 +1,7 @@
 import QrScanner from 'https://cdn.jsdelivr.net/npm/qr-scanner@1.2.0/qr-scanner.min.js';
-QrScanner.WORKER_PATH = 'qr-scanner-worker.min.js'
+QrScanner.WORKER_PATH = 'js/qr-scanner-worker.min.js'
 
-console.log(QrScanner);
+// console.log(QrScanner);
 const videoElement = document.querySelector("#qr")
 const quantity = document.querySelector("#quantity")
 const t = document.querySelector("#t")
@@ -54,7 +54,7 @@ start.addEventListener('click',() =>{
       'Content-type': 'application/json'
     },
     body: JSON.stringify({
-      'user_id': 1,
+      'user_id': 15,
       'item_id': id,
       'quantity': QQ[idx]
     })
@@ -73,8 +73,16 @@ const Qrcanner = new QrScanner(videoElement, result => {
   console.log(ids);
   ids.forEach(id => {
     const newitem = document.createElement('span')
-    newitem.innerHTML = `<br/>item ${id}`
-    t.appendChild(newitem)
+    console.log(`http://localhost/backend/api/item/readItem.php?id=${id}`);
+    fetch(`http://localhost/backend/api/item/readItem.php?id=${id}`, {
+      'method': 'GET',
+      header: {
+        'Content-type': 'application/json'
+      }}).then(response => response.json()).then(data =>{
+        data.NAME?newitem.innerHTML = `${data.NAME} || `:newitem.innerHTML = `not exist || `
+        t.appendChild(newitem)
+      })
+    
   });
 });
 
@@ -84,9 +92,7 @@ Qrcanner.start();
 
 
 
-window.addEventListener('resize' , function(){
-  
-})
+
 
 
 

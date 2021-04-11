@@ -1,10 +1,10 @@
 var container = document.querySelector('#mySales')
 console.log(container);
 
-var id = 15
+var id = window.localStorage.getItem('id')?window.localStorage.getItem('id'):0
 
 
-console.log("hell");
+
 fetch(`http://localhost/backend/api/sales/sellerSales.php?user_id=${id}`).then(response =>
     response.json()
 ).then(data => {

@@ -12,6 +12,61 @@ $font-body: "Anonymous Pro";
 
 body {
   
+  #QrContainer {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 200px;
+    overflow: hidden;
+    background-color: rgba(12, 12, 12, 0.9);
+    color: white;
+    display: none;
+    video {
+      max-width: 70%;
+    }
+    .t{
+      display: flex;
+    }
+    button {
+      background-color: $blue;
+      border: none;
+      color: white;
+      padding: 10px 30px;
+      font-size: 13px;
+      margin-top: 50px;
+      float: right;
+      
+      &:hover {
+        background-color: white;
+        color: $blue;
+      }
+    }
+    .btn.cancel{
+      
+      border-radius: 50%;
+      padding:  5px 10px;
+      background-color: red;
+      font-size: 20px;
+      color: white;
+      font-family: sans-serif;
+      position: absolute;
+      right: 10px;
+      top: 0;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      
+  }
+  }
   background-color: $clr-bk-body;
   font-family: $font-body;
   display: flex;
